@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-color: #222222; 
+   font-family:'Roboto','sans-serif' ;
+   color: #ececde;
+
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+}
+.grand-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container{
+    background-image: linear-gradient(20deg,black,#383338);
+   margin-top: 2.8rem;
+    border: 1px solid #333232;
+    border-radius: 3.5px;
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.weather-img{
+    max-height: 6.3rem;
+}
+.humidity-img{
+    max-height: 1rem;
+}
+.wind-img{
+    max-height:1rem ;
+}
+.city{
+    border: 0.8px solid #525252;
+    border-radius: 2px;
+    padding: 3px 13px;
+    background:transparent;
+    color: #777777;
+}
+
+
+.card-container{
+    /* border: 1.5px solid red; */
+    position: relative;
+}
+
+.upper-div{
+    /* border: 1.5px solid red; */
+    min-width:20rem;
+    position: relative;
+   
+}
+
+.middle-div{
+    /* border: 1.5px solid rgb(255, 0, 191); */
+    height: 10rem;
+    min-width:20rem;
+    position: relative;
+}
+
+.lower-div{
+    /* border: 1.5px solid rgb(0, 255, 13); */
+    display: flex;
+    justify-content: space-between;      
+    min-width:20rem;
+    height: 5rem;
+    
+}
+
+.lower-div-left{
+    /* border: 1.5px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 1rem;
+}
+.lower-div-right{
+    /* border: 1.5px solid blue; */
+    width: 10rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size:4rem ;
+    
+}
+.city{
+    position: absolute;
+   left: 1rem;
+   top: 1rem;
+}
+.city-input{
+   position: absolute;
+   right: 1rem;
+   top: 1rem;
+   background-color: transparent;
+   border: 0.8px solid #525252;
+   border-radius: 2px;
+   height: 1.3rem;
+   color: #bbb6b6;
+}
+.weather-img{
+    position: absolute;
+top: 2.2rem;
+left: 6.5rem;
+}
+.weather-text{
+    position: absolute;
+    top: 9.2rem;
+    left: 8.1rem;
+    font-size:1rem ;
+    color: #777777;
+}
+.humidity-text{
+    position: relative;
+    top: -1.7px;
+}
+
+.wind-text{
+    position: relative;
+    top: -2px;
+    left: 2.2px;
+}
+.city-submit{
+    position: absolute;
+    background-color: transparent;
+    color: #777777;
+    border: none;
+   top: 1.24rem;
+   left: 17.9rem;
+   font-size:0.7rem;
+}
