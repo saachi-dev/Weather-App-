@@ -10,7 +10,7 @@ var temperature = document.querySelector('.weather-temp');
 var target;
 
 //event listeners
-submit.addEventListener('click',search);
+
 
 
 
@@ -20,8 +20,8 @@ submit.addEventListener('click',search);
 //functions 
 
 //search function 
-function search (e){
-    e.preventDefault();
+function search (){
+    
    let target= input.value;
    fetchData(target);
 }
