@@ -27,12 +27,12 @@ const fetchData = async (target)=>{
          // Destructuring
     const {
         main: {temp,humidity},
-        weather:[ { main, icon }],
+        weather:[ { main, description }],
         wind: {speed},
         name
           }=data;
      updateDom(temp,name,main,humidity,speed);  
-     updateIcon(main);
+     updateIcon(main,description);
 }
 catch(error){
      alert("Location not found");
@@ -48,7 +48,7 @@ function updateDom(temp,name,type,humidity,speed){
 }
 
 
-function updateIcon(type){
+function updateIcon(type,des){
    if(type=="Clear"){
     weatherImg.src='./img/clearsky.png';
     
@@ -70,5 +70,8 @@ function updateIcon(type){
    }
    if(type=="Thunderstorm"){
     weatherImg.src='./img/tornado.png';
+   }
+   if(des=='haze'){
+    weatherImg.src='./img/mist.png';
    }
 }

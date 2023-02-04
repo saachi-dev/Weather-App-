@@ -33,7 +33,7 @@ background-attachment: fixed;
 
 .weather-img{
    
-    width: 40%;
+    width: 50%;
     transition: cubic-bezier(.19,.61,.78,.6);
     animation: grow 2s infinite alternate-reverse;
 }
