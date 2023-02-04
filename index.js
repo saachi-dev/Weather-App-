@@ -9,16 +9,6 @@ var wind = document.querySelector('.wind-text');
 var temperature = document.querySelector('.weather-temp');
 var target;
 
-//event listeners
-
-
-
-
-
-
-//https:api.weatherapi.com/v1/current.json?key=5b27a6ef3547402582e62007222306&q=London
-//functions 
-
 //search function 
 function search (){
     
@@ -42,6 +32,7 @@ const fetchData = async (target)=>{
         name
           }=data;
      updateDom(temp,name,main,icon,humidity,speed);  
+     updateIcon(icon,main);
 }
 catch(error){
      alert("Location not found");
@@ -50,9 +41,34 @@ catch(error){
 
 function updateDom(temp,name,type,icon,humidity,speed){
     cityName.innerText=name;
-    weatherImg.src=`http://openweathermap.org/img/wn/${icon}@2x.png`;
     weatherText.innerText=type;
-    temperature.innerText=`${Math.floor(temp)}°`;
+    temperature.innerText=`${Math.floor(temp)}°C`;
     preci.innerText=`${humidity}%`;
     wind.innerText=`${speed} Km/h`;
+}
+//`http://openweathermap.org/img/wn/${icon}@2x.png`
+
+function updateIcon(icon,type){
+   if(type=="Clear"){
+    weatherImg.src='./img/clearsky.png';
+    
+   }
+   if(type=="Clouds"){
+    weatherImg.src='./img/fewcloud.png';
+   }
+   if(type=="Atmosphere"){
+    weatherImg.src='./img/mist.png';
+   }
+   if(type=="Snow"){
+    weatherImg.src='./img/snow.png';
+   }
+   if(type=="Rain"){
+    weatherImg.src='./img/showerrain.png';
+   }
+   if(type=="Drizzle"){
+    weatherImg.src='./img/003-heavy-rain.png';
+   }
+   if(type=="Thunderstorm"){
+    weatherImg.src='./img/tornado.png';
+   }
 }

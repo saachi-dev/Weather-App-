@@ -33,7 +33,7 @@ background-attachment: fixed;
 
 .weather-img{
    
-    width: 50%;
+    width: 40%;
     transition: cubic-bezier(.19,.61,.78,.6);
     animation: grow 2s infinite alternate-reverse;
 }
@@ -115,8 +115,9 @@ background-attachment: fixed;
 }
 
 .weather-text{
-    font-size:1rem ;
+    font-size:1.7rem ;
     color: #777777;
+   margin-top: 40px;
 }
 .humidity-text{
     position: relative;
