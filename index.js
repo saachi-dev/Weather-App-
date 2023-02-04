@@ -31,24 +31,24 @@ const fetchData = async (target)=>{
         wind: {speed},
         name
           }=data;
-     updateDom(temp,name,main,icon,humidity,speed);  
-     updateIcon(icon,main);
+     updateDom(temp,name,main,humidity,speed);  
+     updateIcon(main);
 }
 catch(error){
      alert("Location not found");
  }
 }  
 
-function updateDom(temp,name,type,icon,humidity,speed){
+function updateDom(temp,name,type,humidity,speed){
     cityName.innerText=name;
     weatherText.innerText=type;
     temperature.innerText=`${Math.floor(temp)}°C`;
     preci.innerText=`${humidity}%`;
     wind.innerText=`${speed} Km/h`;
 }
-//`http://openweathermap.org/img/wn/${icon}@2x.png`
 
-function updateIcon(icon,type){
+
+function updateIcon(type){
    if(type=="Clear"){
     weatherImg.src='./img/clearsky.png';
     
